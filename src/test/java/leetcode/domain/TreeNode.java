@@ -12,7 +12,7 @@ package leetcode.domain;
  */
 public class TreeNode {
 
-    int val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
@@ -27,15 +27,6 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
-    }
-
-    public static TreeNode createTree(int[] num) {
-        TreeNode root = new TreeNode(num[0]);
-        for (int i = 1; i < num.length; i++) {
-            root.addRecursive(root, num[i]);
-        }
-
-        return root;
     }
 
     // 前序
@@ -65,6 +56,22 @@ public class TreeNode {
         }
     }
 
+    private TreeNode addBySequence(TreeNode current, int value) {
+        if (current == null) {
+            return new TreeNode(value);
+        }
+
+        if (left == null) {
+            current.left = new TreeNode(value);
+        } else if (right == null) {
+            current.right = new TreeNode(value);
+        } else {
+            return addBySequence(current.left, value);
+        }
+
+        return current;
+    }
+
     private TreeNode addRecursive(TreeNode current, int value) {
         if (current == null) {
             return new TreeNode(value);
@@ -80,6 +87,23 @@ public class TreeNode {
         }
 
         return current;
+    }
+
+    public static TreeNode createTree(int[] num) {
+        TreeNode root = new TreeNode(num[0]);
+        for (int i = 1; i < num.length; i++) {
+            root.addRecursive(root, num[i]);
+        }
+
+        return root;
+    }
+
+    public static TreeNode createTreeBySequence(int[] nums) {
+        TreeNode root = new TreeNode(nums[0]);
+        for (int i = 1; i < nums.length; i++) {
+            root.addBySequence(root, nums[i]);
+        }
+        return root;
     }
 
     public static void main(String[] args) {

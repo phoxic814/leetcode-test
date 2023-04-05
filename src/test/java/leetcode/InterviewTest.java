@@ -70,9 +70,9 @@ public class InterviewTest {
         String b = "facebook";
         String c = "youtube";
         List<List<Character>> input1 = Arrays.asList(
-                a.chars().mapToObj(e -> (char) e) .collect(Collectors.toList()),
-                b.chars().mapToObj(e -> (char) e) .collect(Collectors.toList()),
-                c.chars().mapToObj(e -> (char) e) .collect(Collectors.toList())
+                a.chars().mapToObj(e -> (char) e).collect(Collectors.toList()),
+                b.chars().mapToObj(e -> (char) e).collect(Collectors.toList()),
+                c.chars().mapToObj(e -> (char) e).collect(Collectors.toList())
         );
         List<Character> result1 = common(input1);
         result1.forEach(System.out::println);

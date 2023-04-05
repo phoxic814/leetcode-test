@@ -4,8 +4,9 @@ import leetcode.domain.TreeNode;
 import org.junit.Test;
 
 /**
- * no.222
- * https://leetcode.com/problems/count-complete-tree-nodes/
+ * no.226
+ * https://leetcode.com/problems/invert-binary-tree/
+ *
  */
 public class CompleteTreeNode {
 
@@ -20,5 +21,4 @@ public class CompleteTreeNode {
         if (root == null) return 0;
         return countNodes(root.left) + countNodes(root.right) + 1;
     }
-
 }

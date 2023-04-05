@@ -5,6 +5,10 @@ import org.w3c.dom.Node;
 
 import java.util.*;
 
+/**
+ * no.19
+ * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ */
 public class RemoveLinkListNode {
 
     public static class ListNode {

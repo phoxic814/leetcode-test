@@ -7,6 +7,7 @@ import java.util.*;
 /**
  * NO.41
  * https://leetcode.com/problems/first-missing-positive/
+ * note: O(n) time
  */
 public class FirstMissingPositive {
 
@@ -21,6 +22,7 @@ public class FirstMissingPositive {
         System.out.println(firstMissingPositive(nums));
     }
 
+    // time O(n) space O(n)
     public int firstMissingPositive(int[] nums) {
         Set<Integer> result = new HashSet<>();
 

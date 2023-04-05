@@ -3,7 +3,7 @@ package leetcode;
 import org.junit.Test;
 /**
  * NO.11
- * https://www.code-recipe.com/post/container-with-most-water
+ * https://leetcode.com/problems/container-with-most-water/
  */
 public class ContainerWithMostWater {
 
